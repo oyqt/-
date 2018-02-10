@@ -1,0 +1,548 @@
+/* pages/recommend/recommend.wxss */
+
+.container {
+  width: 100%;
+  min-width: 100%;
+  position: relative;
+}
+
+.container .slide {
+  width: 100%;
+  height: 350rpx;
+  margin-bottom: 80rpx;
+  position: relative;
+}
+
+.container .slide swiper {
+  width: 100%;
+  height: 350rpx;
+  position: relative;
+  background-color: green;
+}
+
+.container swiper swiper-item {
+  display: inline-block;
+}
+
+.container swiper swiper-item image {
+  width: 100%;
+  height: 350rpx;
+}
+
+.container .dot-wrap {
+  position: absolute;
+  right: 30rpx;
+  bottom: 40rpx;
+  display: flex;
+  z-index: 10;
+  flex-direction: row;
+}
+
+.container .dot-wrap view {
+  width: 20rpx;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-right: 8rpx;
+  height: 4rpx;
+}
+
+.container .dot-wrap .current {
+  background-color: white;
+}
+
+.container .slide .search-wrap {
+  width: 90%;
+  margin: 0 auto;
+  background: white;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: -50rpx;
+  left: 5%;
+  box-shadow: 2rpx 2rpx 3rpx rgba(0, 0, 0, 0.1);
+  border-radius: 8rpx;
+}
+
+.container .slide .search-wrap input {
+  font-size: 25rpx;
+  text-align: left;
+  flex: 1;
+  padding: 0 24rpx;
+}
+
+.container .slide .search-wrap input .placeholder {
+  color: #bfbfbf;
+}
+
+.container .slide .search-wrap image {
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.container .recommend-section {
+  width: 90%;
+  border-radius: 8rpx;
+  margin: 0 auto;
+  margin-bottom: 30rpx;
+  padding: 30rpx 0;
+  background: white;
+}
+
+.container .recommend-section  .title {
+  font-size: 26rpx;
+  color: #999;
+  padding-left: 30rpx;
+  padding-bottom: 30rpx;
+}
+
+.container .recommend-section  .city {
+  font-size: 40rpx;
+  color: black;
+  padding-left: 30rpx;
+  padding-bottom: 40rpx;
+  font-weight: 600;
+}
+
+.container .recommend-section .list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom: 2rpx solid #eee;
+  padding-bottom: 30rpx;
+}
+
+.container .recommend-section .list .view-item {
+  text-align: center;
+}
+
+.container .recommend-section .list .view-item image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.container .recommend-section .list .view-item view {
+  font-size: 26rpx;
+  color: #333;
+}
+
+.container .list-city {
+  display: flex;
+  flex-direction: row;
+}
+
+.container .list-city .item {
+  width: 100%;
+  margin: 40rpx 0 10rpx;
+}
+
+.container .list-city .item .wrap {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  align-items: center;
+  background-color: #a5fa91;
+  width: 70%;
+  border-radius: 25rpx;
+  height: 50rpx;
+  justify-content: center;
+}
+
+.container .list-city image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+
+.container .list-city .txt {
+  font-size: 26rpx;
+  color: #14ca72;
+}
+
+.container .slide-y {
+  margin-bottom: 30rpx;
+}
+
+.container .slide-y, .container .slide-y scroll-view {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.container .slide-y scroll-view .item {
+  display: inline-block;
+  margin-left: 30rpx;
+}
+
+.container .slide-y scroll-view .item .img-wrap {
+  position: relative;
+}
+
+.container .slide-y scroll-view .item .img-wrap .des {
+  color: white;
+  position: absolute;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  line-height: 140rpx;
+  box-shadow: 2rpx 2rpx 4rpx rgba(0, 0, 0, 0.2);
+  font-size: 32rpx;
+}
+
+.container .slide-y scroll-view .item:last-child {
+  margin-right: 30rpx;
+}
+
+.container .slide-y scroll-view .item image {
+  width: 250rpx;
+  height: 140rpx;
+  border-radius: 15rpx;
+}
+
+.container .slide-y scroll-view .item view {
+  font-size: 26rpx;
+  color: #666;
+}
+
+.container .nav-fixed {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container .nav-tab {
+  width: 100%;
+  white-space: nowrap;
+  background-color: white;
+  margin-bottom: 30rpx;
+  height: 80rpx;
+}
+
+.container .nav-tab .tab-item {
+  width: 20%;
+  height: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  line-height: 80rpx;
+  color: #999;
+  text-align: center;
+}
+
+.container .nav-tab .active {
+  color: #14ca72;
+  border-bottom: 4rpx solid #14ca72;
+}
+
+.container .nav-list {
+  width: 100%;
+  height: auto;
+}
+
+.container .nav-list .item-list {
+  width: 100%;
+  height: auto;
+  margin-bottom: 30rpx;
+}
+
+/* 游记，发现，商城等... */
+
+.container .nav-list .item-list .item-common {
+  height: auto;
+  display: flex;
+  background-color: white;
+  width: 90%;
+  margin: 0 auto;
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+  flex-direction: column;
+}
+
+.container .nav-list .item-list .item-common	.image-wrap {
+  position: relative;
+}
+
+.container .nav-list .item-list .item-common	.image-wrap image {
+  width: 100%;
+  height: 280rpx;
+  border-radius: 10rpx;
+}
+
+.container .nav-list .item-list .item-common	.image-wrap view {
+  position: absolute;
+  top: 30rpx;
+  left: 30rpx;
+  border: 2rpx solid white;
+  border-radius: 20rpx;
+  font-size: 26rpx;
+  color: white;
+  padding: 4rpx 12rpx;
+}
+
+.container .nav-list .item-list .item-common .title {
+  font-size: 32rpx;
+  color: black;
+  padding: 30rpx;
+  font-weight: 600;
+}
+
+.container .nav-list .item-list .item-common .subject {
+  color: #999;
+  font-size: 26rpx;
+  padding: 0 30rpx 40rpx 30rpx;
+}
+
+.container .nav-list .item-list .item-common .user-info {
+  display: flex;
+  flex-direction: row;
+  padding: 0 30rpx 40rpx 30rpx;
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+  align-items: center;
+}
+
+.container .nav-list .item-list .item-common .user-info image {
+  width: 46rpx;
+  height: 46rpx;
+  border-radius: 23rpx;
+  margin-right: 20rpx;
+}
+
+.container .nav-list .item-list .item-common .user-info text {
+  font-size: 20rpx;
+  color: #999;
+}
+
+/* 今日话题 */
+
+.topicToday {
+  width: 100%;
+}
+
+.topicToday .title {
+  padding-left: 30rpx;
+  font-size: 26rpx;
+  font-weight: 600;
+  color: black;
+  padding-bottom: 20rpx;
+  display: block;
+}
+
+.topicToday scroll-view {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.topicToday scroll-view .item-view {
+  display: inline-block;
+  height: 200rpx;
+  border-radius: 10rpx;
+  width: 430rpx;
+  margin-left: 30rpx;
+  position: relative;
+  text-align: center;
+}
+
+.topicToday scroll-view .item-view:first-child {
+  background: cyan;
+  background: linear-gradient(to right, #11c1c2, #058687);
+}
+
+.topicToday scroll-view .item-view:nth-of-type(2) {
+  background: linear-gradient(to right, #f440ad, #b01171);
+}
+
+.topicToday scroll-view .item-view:nth-of-type(3) {
+  background: linear-gradient(to right, #f18527, #b3590b);
+}
+
+.topicToday scroll-view .item-view:nth-of-type(4) {
+  background: linear-gradient(to right, #f0d032, #bb9d0c);
+}
+
+.topicToday scroll-view .item-view:nth-of-type(5) {
+  background: linear-gradient(to right, #73ec21, #54b115);
+}
+
+.topicToday scroll-view .item-view .wrap {
+  position: absolute;
+  top: 15%;
+}
+
+.topicToday scroll-view .item-view .date {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 24rpx;
+  font-size: 32rpx;
+}
+
+.topicToday scroll-view .item-view .des {
+  font-size: 34rpx;
+  color: white;
+  background: black;
+  width: 75%;
+  white-space: normal;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* 本周精选 */
+
+.weekSelected {
+  width: 100%;
+}
+
+.weekSelected .column {
+  padding-left: 30rpx;
+  font-size: 26rpx;
+  font-weight: 600;
+  color: black;
+  padding-bottom: 20rpx;
+  display: inline-block;
+}
+
+.weekSelected .date-str {
+  font-size: 26rpx;
+  color: black;
+  padding-left: 20rpx;
+}
+
+.weekSelected scroll-view {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.weekSelected scroll-view .item-view {
+  display: inline-block;
+  height: 200rpx;
+  border-radius: 10rpx;
+  width: 430rpx;
+  margin-left: 30rpx;
+  text-align: center;
+}
+
+.weekSelected scroll-view .item-view:first-child {
+  background: linear-gradient(to right, #f18527, #b3590b);
+}
+
+.weekSelected scroll-view .item-view:last-child {
+  margin-right: 30rpx;
+}
+
+.weekSelected scroll-view .item-view:nth-of-type(2) {
+  background: linear-gradient(to right, #f440ad, #b01171);
+}
+
+.weekSelected scroll-view .item-view:nth-of-type(3) {
+  background: linear-gradient(to right, #f18527, #b3590b);
+}
+
+.weekSelected scroll-view .item-view:nth-of-type(4) {
+  background: linear-gradient(to right, #f0d032, #bb9d0c);
+}
+
+.weekSelected scroll-view .item-view:nth-of-type(5) {
+  background: linear-gradient(to right, #73ec21, #54b115);
+}
+
+.weekSelected scroll-view .item-view .wrap {
+  color: white;
+  font-weight: 600;
+  margin-top: 12%;
+}
+
+.weekSelected scroll-view .item-view .wrap .tag {
+  font-weight: 600;
+  margin-bottom: 16rpx;
+  display: inline-block;
+  font-size: 32rpx;
+}
+
+.weekSelected scroll-view .item-view .wrap .title {
+  margin-bottom: 24rpx;
+  font-size: 34rpx;
+}
+
+/*  推荐目的地 */
+
+.suggest {
+  width: 100%;
+}
+
+.suggest .column {
+  padding-left: 30rpx;
+  font-size: 26rpx;
+  font-weight: 600;
+  color: black;
+  padding-bottom: 20rpx;
+  display: inline-block;
+}
+
+.suggest scroll-view {
+  white-space: nowrap;
+}
+
+.suggest scroll-view .item-view {
+  width: 130rpx;
+  height: 130rpx;
+  position: relative;
+  display: inline-block;
+  margin-left: 30rpx;
+}
+
+.suggest scroll-view .item-view image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 10rpx;
+}
+
+.suggest scroll-view .item-view .bg {
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 10rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.suggest scroll-view .item-view .name {
+  color: white;
+  font-size: 26rpx;
+  text-overflow: ellipsis;
+  text-align: center;
+  width: 120rpx;
+  white-space: nowrap;
+  z-index: 5;
+  position: absolute;
+  top: 15%;
+  overflow: hidden;
+}
+
+.suggest scroll-view .item-view .parent-name {
+  color: white;
+  overflow: hidden;
+  z-index: 5;
+  font-size: 22rpx;
+  position: absolute;
+  top: 50%;
+  white-space: nowrap;
+  text-align: center;
+  text-overflow: ellipsis;
+  width: 120rpx;
+}
+
+.loading-view {
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  color: #666;
+  font-size: 30rpx;
+  margin-bottom: 30rpx;
+}

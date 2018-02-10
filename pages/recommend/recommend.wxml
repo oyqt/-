@@ -1,0 +1,130 @@
+<!--pages/recommend/recommend.wxml-->
+<scroll-view scroll-y scroll-into-view="tab">
+  <view class="container">
+    <view class="slide">
+      <swiper autoplay duration="{{duration}}" interval="{{interval}}" bindchange="swiperChange">
+        <swiper-item wx:for="{{srcs}}">
+          <image src="{{item}}" mode="aspectFill" />
+        </swiper-item>
+      </swiper>
+      <view class="dot-wrap">
+        <view wx:for="{{data.slide}}" class="{{swiperIndexCur == index ? 'current':''}}" />
+      </view>
+
+      <view class="search-wrap">
+        <icon type="search" size="12" />
+        <input placeholder="搜索目的地，锦囊，游记，特价，穷游er" placeholder-class="placeholder" />
+        <image src="../../images/scan.png" />
+      </view>
+    </view>
+
+    <view class="recommend-section">
+      <view class="title">为你推荐</view>
+      <view class="city">东京</view>
+      <view class="list">
+        <view class="view-item" wx:for="{{recommendSection}}">
+          <image src="{{item.src}}" />
+          <view>{{item.txt}}</view>
+        </view>
+      </view>
+      <view class="list-city">
+        <view wx:for="{{listCity}}" class="item">
+          <view class="wrap">
+            <image src="{{item.icon}}" />
+            <view class="txt">{{item.txt}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="slide-y">
+      <scroll-view scroll-x>
+        <view wx:for="{{slideY}}" class="item">
+          <view class="img-wrap">
+            <image src="{{item.image}}" mode="aspectFit" />
+            <text class="des">{{item.des}}</text>
+          </view>
+          <view>{{item.txt}}</view>
+        </view>
+      </scroll-view>
+    </view>
+
+    <scroll-view class="nav-tab " upper-threshold="0" scroll-x bindscrolltoupper="navUpper">
+      <view class="tab-item {{tabCurrentIndex == index?'active':''}}" wx:for="{{data.feed_tags}}" bindtap="navItemTap" data-index="{{index}}" data-ids="{{item.tag_ids}}">
+        {{item.tag_name}}
+      </view>
+    </scroll-view>
+
+    <view class="nav-list">
+      <!--	
+		 type == 1 游记 问答 商城 干货 发现； 
+		 type == 5 今日话题；
+		 type == 4 本周精选 ；
+		 type == 6 2月推荐目的地  
+		  -->
+      <view wx:for="{{feedData.entry}}" class="item-list">
+        <!--  游记 问答 商城 干货 发现 -->
+        <view wx:if="{{item.type==1}}" class="item-common item">
+          <view class="image-wrap">
+            <view class="label">{{item.column}}</view>
+            <image src="../../images/tab-item.jpg" mode="scaleToFill" />
+          </view>
+
+          <view class="title">{{item.title}}</view>
+          <view class="subject">{{item.subject}}</view>
+          <view class="user-info" wx:if="{{item.author.username}}">
+            <image src="../../images/pic.jpg" />
+            <text>{{item.author.username}}</text>
+          </view>
+        </view>
+
+        <!--  今日话题； -->
+        <view wx:if="{{item.type==5}}" class="topicToday">
+          <text class="title">{{item.column}}</text>
+          <scroll-view scroll-x>
+            <view class="item-view" wx:for="{{item.subitems_daily_topic}}" wx:for-item="subItem">
+              <view class="wrap">
+                <text class="date">{{subItem.tag}}</text>
+                <view class="des">
+                  {{subItem.title}}
+                </view>
+              </view>
+            </view>
+          </scroll-view>
+        </view>
+
+        <!--  本周精选 -->
+        <view wx:if="{{item.type==4}}" class="weekSelected">
+          <text class="column">{{item.column}}</text>
+          <text class="date-str">{{item.date_str}}</text>
+          <scroll-view scroll-x>
+            <view class="item-view" wx:for="{{item.subitems_week_selected}}" wx:for-item="subItem">
+              <view class="wrap">
+                <text class="tag">{{subItem.tag}}</text>
+                <view class="title">{{subItem.title}}</view>
+              </view>
+            </view>
+          </scroll-view>
+        </view>
+
+        <!--  2月推荐目的地   -->
+        <view wx:if="{{item.type==6}}" class="suggest">
+          <text class="column">{{item.column}}</text>
+          <scroll-view scroll-x>
+            <view wx:for="{{item.subitems_poi_suggest}}" class="item-view" wx:for-item="subItem">
+              <image src="../../images/suggest.jpg" />
+              <view class="bg" />
+              <view class="name">{{subItem.name}}</view>
+              <view class="parent-name">{{subItem.parent_name}}</view>
+            </view>
+          </scroll-view>
+        </view>
+
+      </view>
+    </view>
+
+    <view class="loading-view">{{loadingTxt}}</view>
+
+  </view>
+
+</scroll-view>

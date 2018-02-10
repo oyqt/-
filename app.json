@@ -1,0 +1,55 @@
+{
+	"pages": [
+		"pages/destination/destination",
+		"pages/recommend/recommend",
+		"pages/index/index",
+		"pages/logs/logs",
+		"pages/shopping/shopping",
+		"pages/community/community",
+		"pages/my/my"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#14ca72",
+		"navigationBarTitleText": "穷游",
+		"navigationBarTextStyle": "white"
+	},
+	"tabBar": {
+		"color": "#bfbfbf",
+		"selectedColor": "#14ca72",
+		"backgroundColor": "#ffffff",
+		"borderStyle": "black",
+		"list": [
+			{
+				"pagePath": "pages/recommend/recommend",
+				"text": "推荐",
+				"iconPath": "/images/recommend-normal.png",
+				"selectedIconPath": "/images/recommend-select.png"
+			},
+			{
+				"pagePath": "pages/destination/destination",
+				"text": "目的地",
+				"iconPath": "/images/destination-normal.png",
+				"selectedIconPath": "/images/destination-select.png"
+			},
+			{
+				"pagePath": "pages/shopping/shopping",
+				"text": "旅行商城",
+				"iconPath": "/images/shopping-normal.png",
+				"selectedIconPath": "/images/shopping-select.png"
+			},
+			{
+				"pagePath": "pages/community/community",
+				"text": "社区",
+				"iconPath": "/images/community-normal.png",
+				"selectedIconPath": "/images/community-select.png"
+			},
+			{
+				"pagePath": "pages/my/my",
+				"text": "我的",
+				"iconPath": "/images/my-normal.png",
+				"selectedIconPath": "/images/my-select.png"
+			}
+		]
+	}
+}
